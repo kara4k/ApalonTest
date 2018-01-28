@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/settings_category_main">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="is_locked"
+            android:summary="@string/settings_lock_summary"
+            android:title="@string/settings_lock_title"/>
+
+        <EditTextPreference
+            android:defaultValue="pass"
+            android:dependency="is_locked"
+            android:inputType="textPassword"
+            android:key="this_is_not_password"
+            android:summary="@string/settings_password_summary"
+            android:title="@string/settings_password_title"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_category_about">
+        <Preference
+            android:key="version"
+            android:title="@string/settings_version_title"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

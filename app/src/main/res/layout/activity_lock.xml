@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText
+        android:id="@+id/pass_edit_text"
+        android:layout_width="match_parent"
+        android:inputType="textPassword"
+        android:maxLength="8"
+        android:hint="@string/hint_password"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/dimen_default"
+        android:layout_marginEnd="30dp"
+        android:layout_above="@+id/submit_btn"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"/>
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:background="@drawable/button_bcg"
+        android:textColor="@android:color/white"
+        android:layout_marginEnd="30dp"
+        android:text="@string/submit_btn_text"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
