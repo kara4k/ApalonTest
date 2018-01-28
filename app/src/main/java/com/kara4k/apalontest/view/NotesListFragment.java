@@ -178,6 +178,7 @@ public class NotesListFragment extends BaseFragment
 
             @Override
             public void onDestroyActionMode(ActionMode mode) {
+                mPresenter.onActionModeDestroy();
                 mAdapter.finishActionMode();
                 mFab.setVisibility(View.VISIBLE);
                 setDrawerMode(DrawerLayout.LOCK_MODE_UNDEFINED);

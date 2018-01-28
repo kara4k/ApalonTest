@@ -48,9 +48,7 @@ public class NotesListPresenter extends BasePresenter<NotesListViewIF>
     @Inject
     public NotesListPresenter(DaoSession daoSession) {
         mNoteDao = daoSession.getNoteDao();
-        isActionMode = false;
-        mSelectedNotes = new SparseBooleanArray();
-        mSelectedCount = 0;
+        resetSelections();
     }
 
     public void onStart() {
@@ -231,9 +229,16 @@ public class NotesListPresenter extends BasePresenter<NotesListViewIF>
     }
 
     private void finishActionMode() {
+        getView().finishActionMode();
+    }
+
+    private void resetSelections() {
         isActionMode = false;
         mSelectedNotes = new SparseBooleanArray();
         mSelectedCount = 0;
-        getView().finishActionMode();
+    }
+
+    public void onActionModeDestroy() {
+        resetSelections();
     }
 }
